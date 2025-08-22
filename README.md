@@ -2,15 +2,53 @@
 
 A new Flutter project.
 
-## Getting Started
+# Ingredient's Detection Using OCR
 
-This project is a starting point for a Flutter application.
+## Project Overview
+This project is a Flutter-based mobile application that performs Optical Character Recognition (OCR) on food packaging to extract ingredient lists.
+It then classifies the detected ingredients into dietary categories:
+- Gluten-Free
+- Vegan
+- Vegetarian
 
-A few resources to get you started if this is your first Flutter project:
+The classification is rule-based, using keyword matching for lightweight, offline capability. No heavy machine learning models are required, making the app cross-platform and privacy-friendly.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Features
+- Camera capture: Take a picture of the food packaging directly from the app.
+- Gallery import: Choose an existing image from the device gallery.
+- OCR processing: Extract text using Google ML Kit's Text Recognition.
+- Dietary classification: Classify ingredients as gluten-free, vegan, or vegetarian.
+- Offline functionality: No internet connection required for OCR or classification.
+
+---
+
+## Technology Stack
+- Flutter (Dart) – Cross-platform mobile app development
+- Google ML Kit (Text Recognition) – OCR engine
+- Rule-based classification – Lightweight and modular
+
+---
+
+## Project Structure
+lib/
+├── main.dart                    # App entry point with OCR & classification logic (clean)
+├── filepickncamlogicmain.dart   # Fully commented/annotated version (documentation)
+android/                         # Android-specific configuration
+ios/                             # iOS-specific configuration
+pubspec.yaml                     # Dependencies and assets
+
+---
+
+## Quick Start
+git clone https://github.com/Championpapie/Msc_Project.git
+cd Msc_Project
+flutter pub get
+flutter run
+
+---
+
+## Documentation Note
+- lib/main.dart is the clean execution file used to build/run the app.
+- lib/filepickncamlogicmain.dart is a documented version with inline explanations for clarity and assessment.
